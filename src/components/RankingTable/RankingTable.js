@@ -5,6 +5,7 @@ import './RankingTable.css';
 const RankingTable = ({ remainingUsers}) => {
   return (
     <ul className="ranking-table">
+      
       {
         remainingUsers.map((user, index) => (
           <RowItem
