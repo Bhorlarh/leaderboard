@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import CardList from './components/CardList/CardList.js';
+import RankingTable from './components/RankingTable/RankingTable.js';
+import users from './users1.json';
 import './App.css';
 
 function App() {
+  const sortedUsers = users.sort((a, b) => (b.points - a.points));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2 class="title">Leaderboard</h2>
+      <CardList topThree={sortedUsers.slice(0, 3)}/>
+      <RankingTable remainingUsers={sortedUsers.slice(3)}/>
     </div>
   );
 }

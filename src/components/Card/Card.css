@@ -1,0 +1,55 @@
+.card {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 6rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background: white;
+}
+
+.card_rank {
+  line-height: 3rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100px;
+}
+
+.card_1 {
+  align-self: center;
+}
+
+.card_2 {
+  margin-top: -3rem;
+  align-self: flex-start;
+}
+
+.card_3 {
+  margin-top: -4rem;
+  align-self: flex-end;
+}
+
+.card_1 .card_rank {
+  background-color: gold;
+}
+
+.card_2 .card_rank {
+  background-color: #C0C0C0;;
+}
+
+.card_3 .card_rank {
+  background-color: #CD7F32;
+}
+
+.card_span-name {
+  margin: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.card_span-points {
+  color: #527AE9;
+  font-size: 0.8rem;
+}
